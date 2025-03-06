@@ -6,7 +6,7 @@
 %
 clc         % clear command window
 clear all   % clear workspace memory
-close all   % closing all plot windows
+% close all   % closing all plot windows
 
 workspace                                                                       %makes sure that the workspace panel is on
 filebrowser                                                                     %makes sure that the folder browser is on
@@ -49,14 +49,14 @@ usq0 = Rs*isq0+ws*Lsd*isd0+ws*Psim;
 % Parameters for the simulation
 %**********************************************************************
 TL_extra_time=0.5;  % The time when the step is done
-TL_extra=12;        % The load torque that is added, for question 2b) and c)
-% TL_extra=32;      % The load torque that is added, for question 2d)
+% TL_extra=12;        % The load torque that is added, for question 2b) and c)
+TL_extra=32;      % The load torque that is added, for question 2d)
 
 % Call solver using panel settings, i.e Variable-step
 %**********************************************************************
 Tstart=0;
 Tstop=2.5;
-sim('PMSM_Simulink',[Tstart,Tstop])
+sim('PMSM_Simulink_2023',[Tstart,Tstop])
 
 %**********************************************************************
 %  postprocessning part
